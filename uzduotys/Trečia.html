@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<p id="demo"></p>
+<script>
+    let person;
+    person = {
+        firstname: 'Tomas',
+        lastname: 'Tomauskas',
+        course: ' 4 kursas',
+        school: 'KTU',
+        gradearray: '[7,4,5]'
+    }
+    const vardas = 'parametro "vardas" tipas yra:';
+    const pavarde = 'parametro "pavarde" tipas yra:';
+    const kursas = 'parametro "kursas" tipas yra:';
+    const mokykla = 'parametro "mokykla" tipas yra:';
+    const pazymiai = 'parametro "pazymiai" tipas yra:';
+    document.getElementById("demo").innerHTML=person.firstname + ' ' +person.lastname + ' mokosi' + ' ' + person.school + ' ' + person.course + ','+ 'jo pažymiai' + person.gradearray
+    console.log(vardas,typeof person.firstname)
+    console.log(pavarde,typeof person.lastname)
+    console.log(kursas,typeof person.course)
+    console.log(mokykla,typeof person.school)
+    console.log(pazymiai,typeof person.gradearray)
+</script>
+
+</body>
+
+</html>

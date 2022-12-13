@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+    array1 = [-5,-4, -3, -2, -1, 0];
+    array2 = [-4, -3, -2, -1, 0 , 1, 2, 3, 4];
+
+    const filtruota = array1.filter(value => array2.includes(value));
+    k = Math.min.apply(Math, filtruota);
+    l = Math.max.apply(Math, filtruota);
+    console.log([k,l]);
+
+</script>
+
+</body>
+
+</html>
