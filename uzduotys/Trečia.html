@@ -6,26 +6,125 @@
 </head>
 <body>
 <p id="demo"></p>
+<p id="astunta"></p>
+<p id="devinta"></p>
+<p id="vienuolikta"></p>
 <script>
-    let person;
-    person = {
+    const key = 'vardas';
+    const getKey = () => 'vardas';
+    const Obj = {
+        vardas: 'Kęstis',
+        mokykla: 'Lakūnų',
+        kursas: 5
+    }
+    let person = {
         firstname: 'Tomas',
         lastname: 'Tomauskas',
-        course: ' 4 kursas',
+        course: 4,
         school: 'KTU',
-        gradearray: '[7,4,5]'
+        gradearray: [7, 4, 5]
     }
+
     const vardas = 'parametro "vardas" tipas yra:';
     const pavarde = 'parametro "pavarde" tipas yra:';
     const kursas = 'parametro "kursas" tipas yra:';
     const mokykla = 'parametro "mokykla" tipas yra:';
     const pazymiai = 'parametro "pazymiai" tipas yra:';
-    document.getElementById("demo").innerHTML=person.firstname + ' ' +person.lastname + ' mokosi' + ' ' + person.school + ' ' + person.course + ','+ 'jo pažymiai' + person.gradearray
-    console.log(vardas,typeof person.firstname)
-    console.log(pavarde,typeof person.lastname)
-    console.log(kursas,typeof person.course)
-    console.log(mokykla,typeof person.school)
-    console.log(pazymiai,typeof person.gradearray)
+    document.getElementById("demo").innerHTML = person.firstname + ' ' + person.lastname + ' mokosi' + ' ' + person.school + ' ' + person.course + ',' + 'jo pažymiai' + person.gradearray
+    console.log(vardas, typeof person.firstname)
+    console.log(pavarde, typeof person.lastname)
+    console.log(kursas, typeof person.course)
+    console.log(mokykla, typeof person.school)
+    console.log(pazymiai, typeof person.gradearray)
+
+
+    /* septinta užduotis */
+
+    console.log(Obj['vardas']);
+    console.log(Obj[key]);
+    console.log[getKey()];
+
+
+    /* Aštunta užduotis */
+
+    for (let i = 0; i < person.gradearray.length; i++) {
+        astunta.innerHTML += person.gradearray[i];
+    }
+    /* Devinta užduotis */
+    for (let i = 0; i < person.gradearray.length; i++) {
+        devinta.innerHTML += person.gradearray[i] + 1;
+    }
+    console.log(devinta)
+    /* Dešimta užduotis */
+    let sum = 0
+    for (let i = 0; i < person.gradearray.length; i++) {
+        sum += person.gradearray[i];
+    }
+    console.log("dešimtos užduoties atsakymas " + ' ' + sum)
+
+    /* Vienuolikta užduotis */
+
+    suma = 0
+    for (let i = 0; i < 2; i++) {
+        suma += person.gradearray[i]
+    }
+    console.log('Vienuoliktos užduoties atsakymas' + ' ' + suma)
+
+    /* Dvylikta užduotis */
+
+    console.log('Dvyliktos užduoties atsakymas:' + ' ' + kursas, typeof person.course)
+
+    /*Trylikta užduotis */
+
+    let personsList = [
+        {
+            firstname: 'Antanas',
+            lastname: 'Tomauskas',
+            course: 1,
+            school: 'KTU',
+            gradearray: [7, 4, 5]
+        },
+        {
+            firstname: 'Petras',
+            lastname: 'Tomauskas',
+            course: 2,
+            school: 'KTU',
+            gradearray: [7, 4, 5]
+        },
+        {
+            firstname: 'Tadas',
+            lastname: 'Tomauskas',
+            course: 3,
+            school: 'KTU',
+            gradearray: [7, 4, 5]
+        },
+        {
+            firstname: 'Tomas',
+            lastname: 'Tomauskas',
+            course: 4,
+            school: 'KTU',
+            gradearray: [7, 4, 5]
+        }]
+
+    let i = 0;
+    while (i < personsList.length) {
+        let person = personsList[i];
+        if (person.course === 4) {
+            console.log('Course: ' + person.course)
+            console.log('Person name: ' + person.firstname)
+        }
+        i++;
+    }
+    // TODO remove this perfect peace of code
+    // console.log('ForEach')
+    // personsList.forEach(it => {
+    //
+    //     if (it.course === 4) {
+    //         console.log('Course: ' + person.course)
+    //         console.log('Person name: ' + person.firstname)
+    //     }
+    // })
+
 </script>
 
 </body>
